@@ -6,14 +6,15 @@ import (
 )
 
 type MailService interface {
-	SendEmail(from string, to []string, message string) (bool, error)
+	SendEmail(to []string, message string) (bool, error)
 }
 
 type SMTPConfig struct {
-	Host     string
-	Username string
-	Password string
-	Port     int16
+	FromEmail string
+	Host      string
+	Username  string
+	Password  string
+	Port      int16
 }
 
 type smtpMailService struct {
@@ -25,10 +26,10 @@ func NewSmtpService(config SMTPConfig) MailService {
 		config: config,
 	}
 }
-func (s smtpMailService) SendEmail(from string, to []string, message string) (bool, error) {
+func (s smtpMailService) SendEmail(to []string, message string) (bool, error) {
 	auth := smtp.PlainAuth("", s.config.Username, s.config.Password, s.config.Host)
 	addr := fmt.Sprintf("%s:%d", s.config.Host, s.config.Port)
-	err := smtp.SendMail(addr, auth, from, to, []byte(message))
+	err := smtp.SendMail(addr, auth, s.config.FromEmail, to, []byte(message))
 
 	if err != nil {
 		return false, err
