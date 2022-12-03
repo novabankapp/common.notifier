@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9a554a1-3cab-4179-976b-5e4a47b47954" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/email/mock_mail_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/mock_sms_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email/mail_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/email/mail_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms/smpp_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/sms/smpp_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms/sms_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/sms/sms_service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
